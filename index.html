@@ -7,7 +7,7 @@
             
             div.creature{
                 padding:5px;
-                border:2px solid black;
+                border:2px solid rgb(0, 0, 0);
                 border-radius:10px;
                 max-width:400px;
                 min-height:100px;
@@ -20,11 +20,19 @@
     
             }
 
+    /*
+            div.creature {
+               background-color:yellow;
+               border:2px solid red;
+    
+            }
+    */
+
         </style>
     </head>   
     <body>
     <h1>Creatures</h1>
-    <h3>A JavaScript data attributes example by NAME HERE</h3>
+    <h3>A JavaScript data attributes example by Nikaya Manalo</h3>
     <p>This page demonstrates how to use JavaScript data attributes to differentiate data.</p>
     <p>When you click <b>Show Creature Home</b>, the background color will change color based on their natural environment:
     </p> 
@@ -99,8 +107,14 @@
                 if creature lives in air, yellow
                 
                 */
-               alert("showHome()");
-            
+               //alert("showHome()");
+                const myNodeList = document.querySelectorAll("div.creature");
+                 console.log(myNodeList);
+                 for(let x=0;x<myNodeList.length;x++){
+	             myNodeList[x].style.backgroundColor = "yellow";
+                }
+
+
         }//end showHome()
         
         function showType()
